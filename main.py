@@ -17,6 +17,8 @@ from pkcs7 import PKCS7Encoder
 from Crypto.Cipher import AES  #upm package(pycryptodome)
 from Crypto import Random  #upm package(pycrypto)
 
+from custom_aes import CustomAES
+
 MODE = AES.MODE_CBC
 
 
@@ -79,11 +81,13 @@ def decrypt(passphrase, encrypted_text):
     compare(binascii.b2a_hex(key), JS_KEY, 'KEY')
     compare(binascii.b2a_hex(iv), JS_IV, 'IV')
 
-    aes = AES.new(key, MODE, iv)
-    decrypted_text = aes.decrypt(encrypted_text_bytes)
-    encoder = PKCS7Encoder()
-    unpad_text = encoder.decode(decrypted_text)
-    print("unpad_text = %s" % binascii.b2a_hex(unpad_text))
+
+
+    # aes = AES.new(key, MODE, iv)
+    # decrypted_text = aes.decrypt(encrypted_text_bytes)
+    # encoder = PKCS7Encoder()
+    # unpad_text = encoder.decode(decrypted_text)
+    # print("unpad_text = %s" % binascii.b2a_hex(unpad_text))
 
     return unpad_text
 
