@@ -1,0 +1,23 @@
+[[package]]
+category = "main"
+description = "extension class for argparse with json configuration"
+name = "pkcs7"
+optional = false
+python-versions = "*"
+version = "0.1.2"
+
+[[package]]
+category = "main"
+description = "Cryptographic modules for Python."
+name = "pycrypto"
+optional = false
+python-versions = "*"
+version = "2.6.1"
+
+[metadata]
+content-hash = "677c8b115e2375053993ba8652150e99c2aad692448f397a825c3c54a8e5df42"
+python-versions = "^2.7"
+
+[metadata.hashes]
+pkcs7 = ["b683994a7d6404cf82840639605b7208884aa2367f84cb0ae731e32d4a1c5eff"]
+pycrypto = ["f2ce1e989b272cfcb677616763e0a2e7ec659effa67a88aa92b3a65528f60a3c"]
